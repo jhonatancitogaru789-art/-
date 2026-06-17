@@ -44,6 +44,6 @@ while True:
         print("退出系统！")
         break
     else:
-        print("无效输入，请重新选择操作选项！")
+        print("无效输入，请重新选择！")
 
 
