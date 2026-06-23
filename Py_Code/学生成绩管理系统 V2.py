@@ -7,9 +7,9 @@ def get_student_name(name):
 def add_student():
     count =int(input("请输入需要添加到学生数量；"))
     for i in range(count):
-        student = {name:input("请输入学生姓名："),\
-                   score:float(input("请输入学生成绩：")),\
-                   age:int(input("请输入学生年龄："))}            
+        student = {"name": input("请输入学生姓名："), \
+                   "score": float(input("请输入学生成绩：")), \
+                   "age": int(input("请输入学生年龄："))}
         students.append(student)
         print("学生信息已添加！")
 def find_student():
