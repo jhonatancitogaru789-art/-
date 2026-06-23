@@ -1,4 +1,4 @@
-students = [None]
+students = []
 def get_student_name(name):
     for student in students:
         if student["name"] == name:
@@ -24,7 +24,7 @@ def find_student():
             print("未找到该学生信息！")
         else:
             print(f"姓名 = {student['name']}, 成绩 = {student['score']}, 年龄 = {student['age']}")
-    if choice =="b":
+    elif choice =="b":
         score = float(input("请输入要查询的学生成绩："))
         found = False
         for student in students:
@@ -34,7 +34,7 @@ def find_student():
                 break
         if not found:
             print("未找到该成绩的学生！")
-    if choice =="c":
+    elif choice =="c":
         age = int(input("请输入要查询的学生年龄："))
         found = False
         for student in students:
@@ -62,11 +62,11 @@ def modify_student():
         new_name = input("请输入新的学生姓名：")
         student["name"] = new_name
         print("学生姓名已修改！")
-    if choice == "b":
+    elif choice == "b":
         new_score = float(input("请输入新的学生成绩："))
         student["score"] = new_score
         print("学生成绩已修改！")
-    if choice == "c":
+    elif choice == "c":
         new_age = int(input("请输入新的学生年龄："))
         student["age"] = new_age
         print("学生年龄已修改！")
@@ -96,7 +96,6 @@ def statistic():
             lowest_score = student["score"]
         if student["score"] < 60:
             fail_count += 1
-            return     
         total_score += student["score"]
         average_score = total_score / students_count
     print(f"学生总数 = {students_count}")
@@ -109,7 +108,7 @@ def menu():
         print("=== 学生成绩管理系统 ===")
         print("1. 添加学生信息\t[输入1]")
         print("2. 查询学生信息\t[输入2]")
-        print("3. 显示所有学生信息\t[输入3]")
+        print("3. 显示所有信息\t[输入3]")
         print("4. 修改学生信息\t[输入4]")
         print("5. 删除学生信息\t[输入5]")
         print("6. 统计学生信息\t[输入6]")
@@ -132,3 +131,4 @@ def menu():
             break
         else:
             print("无效输入，请重新选择！")
+menu()
