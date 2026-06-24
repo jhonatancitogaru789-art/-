@@ -1,0 +1,8 @@
+[mcp_servers.codegraph]
+command = "codegraph"
+args = ["serve", "--mcp"]
+
+[mcp_servers.codegraph.env]
+GIT_CONFIG_COUNT = "1"
+GIT_CONFIG_KEY_0 = "core.quotepath"
+GIT_CONFIG_VALUE_0 = "false"
